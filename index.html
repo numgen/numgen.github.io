@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title> Number Generator </title>
+		<link href='index.css' rel='Stylesheet'>
+		<script>
+		function randomNum(){
+					val = document.getElementById('max_number').value;
+					document.getElementById('output').innerHTML = Math.floor(Math.random() * val) + 1
+		}
+		</script>
+    </head>
+
+    <body>
+        <h1> Random Number Generator</h1>
+		<hr><br>
+		<h3 id = 'output' class="output"> </h3>
+		<br><hr><br>
+		
+		<div class="box">
+			<label class='labels' for='max_number'> Max. Number: </label><br><br>
+        	<input class='labels' type="number" id='max_number' value="100"> 
+			<br><br><button class='labels' onclick='randomNum()'> Generate </button>
+			<script>
+				randomNum()
+			</script>
+		</div>
+        
+    </body>
+</html>
